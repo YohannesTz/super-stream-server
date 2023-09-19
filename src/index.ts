@@ -21,7 +21,7 @@ io.on("connection", (socket) => {
   socket.emit("new-user", "new User connected with Id " + id);
 
   socket.on("message", (msg) => {
-    console.log("Received message: ", msg);
+    //console.log("Received message: ", msg);
     io.emit("message", msg);
   });
 
