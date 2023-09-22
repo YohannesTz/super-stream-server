@@ -25,6 +25,11 @@ io.on("connection", (socket) => {
     io.emit("message", msg);
   });
 
+  socket.on("reaction", (msg) => {
+    console.log("rxn recieved.");
+    io.emit("reaction", msg);
+  });
+
   socket.on("disconnect", () => {
     console.log("disconnected: ", id);
   });
